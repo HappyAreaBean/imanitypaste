@@ -36,7 +36,7 @@ export default function EditorControls({
         pathname: pasteId,
       });
       copy(window.location.href);
-      document.title = 'paste | ' + pasteId;
+      document.title = 'pastebean | ' + pasteId;
     });
   }, [code, language, recentlySaved]);
 
@@ -95,11 +95,19 @@ export default function EditorControls({
         <Button
           className="optional"
           as="a"
-          href="https://github.com/lucko/paste"
+          href="https://github.com/HappyAreaBean/paste"
           target="_blank"
           rel="noreferrer"
         >
-          [about]
+          [github]
+        </Button>
+        <Button
+            className="optional"
+            as="a"
+            href="https://happyareabean.cc"
+            rel="noreferrer"
+        >
+          [{"back"}]
         </Button>
       </Section>
     </Header>
@@ -142,7 +150,7 @@ async function saveToBytebin(code, language) {
     const compressed = gzip(code);
     const contentType = langaugeToContentType(language);
 
-    const resp = await fetch('https://bytebin.lucko.me/post', {
+    const resp = await fetch('https://bytebin.happyareabean.cc/post', {
       method: 'POST',
       headers: {
         'Content-Type': contentType,

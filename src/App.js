@@ -14,14 +14,14 @@ function getPasteIdFromUrl() {
 
 async function loadFromBytebin(id) {
   try {
-    const resp = await fetch('https://bytebin.lucko.me/' + id);
+    const resp = await fetch('https://bytebin.happyareabean.cc/' + id);
     if (resp.ok) {
       const content = await resp.text();
       const type = parseLanguageFromContentType(
-        resp.headers.get('content-type')
+        resp.headers.get('Content-Type')
       );
 
-      document.title = 'paste | ' + id;
+      document.title = 'pastebean | ' + id;
       return { ok: true, content, type };
     } else {
       return { ok: false };

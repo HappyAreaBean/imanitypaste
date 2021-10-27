@@ -65,7 +65,7 @@ export const MenuButton = ({ label, ids, value, setValue }) => {
 
   return (
     <Button onClick={toggleOpen}>
-      [<span>{label}: </span>
+      [<span>{label}:&thinsp; </span>
       {value}]
       {open && (
         <Menu>

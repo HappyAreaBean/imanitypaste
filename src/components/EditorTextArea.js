@@ -45,7 +45,7 @@ export default function EditorTextArea({ code, setCode, language, fontSize }) {
         value={code}
         onValueChange={setCode}
         highlight={highlightWithLineNumbers}
-        placeholder={'Paste (or type) some code...'}
+        placeholder={'Paste (or type) some code...\n\nNOTE: Uploaded content is retained for 7 days then deleted.'}
         padding={10}
         size={fontSize}
         textareaId="code-area"
