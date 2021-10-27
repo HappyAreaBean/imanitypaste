@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Editor from './components/Editor';
 import parseContentType from 'content-type-parser';
 import { languageIds } from './util/highlighting';
@@ -49,8 +49,7 @@ const LOADED = Symbol();
 export default function App() {
   const [pasteId] = useState(getPasteIdFromUrl);
   const [state, setState] = useState(INITIAL);
-  const [forcedContent, setForcedContent] = useState('');
-  const [actualContent, setActualContent] = useState('');
+  const [content, setContent] = useState('');
   const [contentType, setContentType] = useState();
 
   const setContent = useCallback((content) => {
@@ -61,7 +60,7 @@ export default function App() {
   useEffect(() => {
     if (pasteId && state === INITIAL) {
       setState(LOADING);
-      setForcedContent('Loading...');
+      setContent('Loading...');
       loadFromBytebin(pasteId).then(({ ok, content, type }) => {
         if (ok) {
           setContent(content);
