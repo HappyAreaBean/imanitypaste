@@ -5,7 +5,7 @@ import history from 'history/browser';
 import copy from 'copy-to-clipboard';
 
 import { MenuButton, Button } from './Menu';
-import { languages } from '../util/highlighting';
+import { languageIds } from '../util/highlighting';
 import themes from '../style/themes';
 import { postUrl } from '../util/constants';
 
@@ -37,7 +37,7 @@ export default function EditorControls({
         pathname: pasteId,
       });
       copy(window.location.href);
-      document.title = 'paste | ' + pasteId;
+      document.title = 'pastebean | ' + pasteId;
     });
   }, [code, language, recentlySaved]);
 
@@ -81,7 +81,7 @@ export default function EditorControls({
           label="language"
           value={language}
           setValue={setLanguage}
-          ids={languages}
+          ids={languageIds}
         />
       </Section>
       <Section>
@@ -100,7 +100,15 @@ export default function EditorControls({
           target="_blank"
           rel="noreferrer"
         >
-          [about]
+          [github]
+        </Button>
+        <Button
+            className="optional"
+            as="a"
+            href="https://happyareabean.cc"
+            rel="noreferrer"
+        >
+          [{"back"}]
         </Button>
       </Section>
     </Header>

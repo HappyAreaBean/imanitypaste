@@ -22,7 +22,7 @@ async function loadFromBytebin(id) {
         resp.headers.get('content-type')
       );
 
-      document.title = 'paste | ' + id;
+      document.title = 'pastebean | ' + id;
       return { ok: true, content, type };
     } else {
       return { ok: false };
