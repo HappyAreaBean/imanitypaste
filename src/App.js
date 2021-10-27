@@ -22,7 +22,7 @@ async function loadFromBytebin(id) {
         resp.headers.get('content-type')
       );
 
-      document.title = 'pastes | ' + id;
+      document.title = 'Imanity Paste | ' + id;
       return { ok: true, content, type };
     } else {
       return { ok: false };

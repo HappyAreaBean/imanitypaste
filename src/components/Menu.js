@@ -53,7 +53,7 @@ const Menu = styled.ul`
   }
 
   > li {
-    padding: 0em 1em 0.05em 1em;
+    padding: 0.15em 0.5em;
   }
 
   > li:hover {

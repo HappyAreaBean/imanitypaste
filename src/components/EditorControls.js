@@ -38,7 +38,7 @@ export default function EditorControls({
           pathname: pasteId,
         });
         copy(window.location.href);
-        document.title = 'paste | ' + pasteId;
+        document.title = 'Imanity Paste | ' + pasteId;
       }
     });
   }, [actualContent, language, recentlySaved]);
@@ -98,11 +98,19 @@ export default function EditorControls({
         <Button
           className="optional"
           as="a"
-          href="https://github.com/lucko/paste"
+          href="https://github.com/HappyAreaBean/imanitypaste"
           target="_blank"
           rel="noreferrer"
         >
-          [about]
+          [github]
+        </Button>
+        <Button
+            className="optional"
+            as="a"
+            href="https://imanity.dev"
+            rel="noreferrer"
+        >
+          [{"back"}]
         </Button>
       </Section>
     </Header>
