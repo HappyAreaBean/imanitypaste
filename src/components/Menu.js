@@ -53,7 +53,7 @@ const Menu = styled.ul`
   }
 
   > li {
-    padding: 0.15em 0.5em;
+    padding: 0em 1em 0.05em 1em;
   }
 
   > li:hover {
@@ -113,7 +113,7 @@ export const MenuButton = ({ label, ids, value, setValue }) => {
 
   return (
     <Button onClick={toggleOpen}>
-      [<span>{label}: </span>
+      [<span>{label}:&thinsp; </span>
       {value}]{open && <Menu>{items}</Menu>}
     </Button>
   );
