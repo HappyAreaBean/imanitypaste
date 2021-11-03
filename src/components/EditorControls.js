@@ -37,7 +37,7 @@ export default function EditorControls({
         pathname: pasteId,
       });
       copy(window.location.href);
-      document.title = 'pastebean | ' + pasteId;
+      document.title = 'Imanity Paste | ' + pasteId;
     });
   }, [code, language, recentlySaved]);
 
@@ -96,7 +96,7 @@ export default function EditorControls({
         <Button
           className="optional"
           as="a"
-          href="https://github.com/HappyAreaBean/paste"
+          href="https://github.com/HappyAreaBean/imanitypaste"
           target="_blank"
           rel="noreferrer"
         >
@@ -105,7 +105,7 @@ export default function EditorControls({
         <Button
             className="optional"
             as="a"
-            href="https://happyareabean.cc"
+            href="https://imanity.dev"
             rel="noreferrer"
         >
           [{"back"}]
