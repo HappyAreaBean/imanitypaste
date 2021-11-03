@@ -5,7 +5,7 @@ import history from 'history/browser';
 import copy from 'copy-to-clipboard';
 
 import { MenuButton, Button } from './Menu';
-import { languageIds } from '../util/highlighting';
+import { languages } from '../util/highlighting';
 import themes from '../style/themes';
 import { postUrl } from '../util/constants';
 
@@ -81,7 +81,7 @@ export default function EditorControls({
           label="language"
           value={language}
           setValue={setLanguage}
-          ids={languageIds}
+          ids={languages}
         />
       </Section>
       <Section>
@@ -96,7 +96,7 @@ export default function EditorControls({
         <Button
           className="optional"
           as="a"
-          href="https://github.com/lucko/paste"
+          href="https://github.com/HappyAreaBean/paste"
           target="_blank"
           rel="noreferrer"
         >
