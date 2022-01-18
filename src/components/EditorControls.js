@@ -69,7 +69,7 @@ export default function EditorControls({
       pathname: '/',
       hash: '',
     });
-    document.title = 'paste';
+    document.title = 'Imanity Paste';
   }
 
   return (
@@ -85,6 +85,9 @@ export default function EditorControls({
           setValue={setLanguage}
           ids={languages}
         />
+      </Section>
+      <Section>
+        <text>Reminder: Uploaded content is retained for 30 days then deleted.</text>
       </Section>
       <Section>
         <Button onClick={() => zoom(1)}>[+ </Button>
