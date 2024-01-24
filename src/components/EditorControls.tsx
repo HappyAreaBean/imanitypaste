@@ -111,7 +111,7 @@ export default function EditorControls({
         {readOnly && <Button onClick={unsetReadOnly}>[edit]</Button>}
       </Section>
       <Section>
-        <text>Reminder: Uploaded content is retained for 30 days then deleted.</text>
+        <text>Reminder: Uploaded content is retained for <b>60</b> days then deleted.</text>
       </Section>
       <Section>
         <Button onClick={() => zoom(1)}>[+ </Button>
